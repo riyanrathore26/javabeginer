@@ -1,0 +1,13 @@
+import java.util.Stack;
+class Tack
+{
+    public static void main(String args[])
+    {
+        Stack<Integer> stk = new Stack<>();
+        boolean result = stk.empty();
+        System.out.println("stack is:"+result);
+        stk.push(78);
+        stk.push(80);
+        System.out.println("element of array is:"+stk);
+    }
+}
