@@ -4,7 +4,7 @@ class Sum{
         int arr[]={11,2,3,4,5,6,67},sum=0,n=arr.length;
         for(int i=0;i<n; i++)
         if(i!0){
-            sum=sum=arr[i];
+            sum=sum+arr[i];
         }
     }
     for(int k=0; k<n; k++){
