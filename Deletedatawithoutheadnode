@@ -1,0 +1,46 @@
+import java.util.*;
+public class Delete
+{
+    static Node head;
+    static class Node
+    {
+        Node next;
+        int data;
+        Node(int no)
+        {
+            data=no;
+            next=null;
+        }
+    }
+    void remove(Node ptr1)
+    {
+        //head.next=head.next.next.next;
+        ptr1.data = ptr1.next.data;
+
+	    // perform conventional deletion
+	    ptr1.next = ptr1.next.next;
+        System.gc();
+    }
+    void printList(Node nde)  
+            {  
+                while (nde != null)   
+                {  
+                    System.out.print(nde.data + " ");  
+                    nde = nde.next;  
+                }  
+            }
+    public static void main(String args[])
+    {
+        Delete d=new Delete();
+        d.head=new Node(1);
+        d.head.next=new Node(2);
+        d.head.next.next=new Node(3);
+        d.head.next.next.next=new Node(4);
+        d.head.next.next.next.next=new Node(5);
+        d.head.next.next.next.next.next=new Node(6);
+        Node del = d.head.next;
+        d.printList(head);
+        d.remove(del);
+        d.printList(head);
+    }
+}
